@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import Events from "./Events";
+import Events from './Events';
 
-import "./Container.scss";
+import './Container.scss';
 
-function Container(props) {
+function Container({ events, ...restProps }) {
   function makeTimeArray(start, end) {
     // hardcoded from 9am to 9pm
     const MINUTE_INTERVAL = 30;
@@ -14,8 +14,8 @@ function Container(props) {
     const timeArray = [];
     while (ts.getTime() <= te.getTime()) {
       const timeString = ts
-        .toLocaleTimeString("default", { hour: "numeric", minute: "numeric" })
-        .replace(/(AM|PM)/g, "")
+        .toLocaleTimeString('default', { hour: 'numeric', minute: 'numeric' })
+        .replace(/(AM|PM)/g, '')
         .trim();
       timeArray.push(timeString);
       ts.setMinutes(ts.getMinutes() + MINUTE_INTERVAL);
@@ -25,7 +25,7 @@ function Container(props) {
 
   return (
     <div className="calendar-container">
-      <Events />
+      <Events events={events} />
       <div className="calendar-inner">
         <div className="time-container am">
           <h1>AM</h1>
