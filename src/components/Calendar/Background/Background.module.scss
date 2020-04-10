@@ -1,0 +1,11 @@
+.background {
+  color: var(--d-font-gray);
+  font-size: 21rem;
+  font-weight: bold;
+  transform: rotate(50deg) translate(4%, 170%);
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  display: block;
+  text-transform: uppercase;
+}

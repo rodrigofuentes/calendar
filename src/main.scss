@@ -1,0 +1,25 @@
+@import "./reset.scss";
+
+:root {
+  --pink: rgba(237, 29, 121, 1);
+  --blue: rgba(64, 169, 245, 1);
+  --gray-bg: rgba(230, 230, 230, 1);
+  --pink-bg: rgba(254, 246, 248, 0.95);
+  --blue-bg: rgba(238, 254, 254, 0.95);
+  --d-font-gray: rgba(51, 51, 51, 0.8);
+  --l-font-gray: #828282;
+  --l-border-gray: #d1d0d0;
+  --d-border-gray: #a9a7a8;
+}
+
+html {
+  font-family: "Gotham", "Montserrat", Helvetica, arial, san-serif;
+  font-size: 16px;
+}
+
+body {
+  color: var(--dfontgray);
+  position: relative;
+  overflow-x: hidden;
+  font-size: 0.8rem;
+}
